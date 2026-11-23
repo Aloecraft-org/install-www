@@ -1,0 +1,6 @@
+# Serve the installer scripts as plain text, so a browser shows them
+# instead of downloading them and `irm | iex` always gets a string.
+/*.sh
+  Content-Type: text/plain; charset=utf-8
+/*.ps1
+  Content-Type: text/plain; charset=utf-8

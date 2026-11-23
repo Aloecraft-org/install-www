@@ -1,5 +1,5 @@
 URLS := $(shell jq -r '.[][]' manifest.json)
-.PHONY: fetch_release_scripts vendor_cdn
+.PHONY: fetch_release_scripts vendor_cdn dev deploy
 
 fetch_release_scripts:
 	@$(foreach url,$(URLS),wget -q -O www/$(patsubst install-%,%,$(notdir $(url))) $(url) &&) true
@@ -14,3 +14,6 @@ vendor_cdn:
 
 dev:
 	@python3 -m http.server -d www
+
+deploy:
+	@npx wrangler@4 deploy

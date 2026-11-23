@@ -1,0 +1,13 @@
+{
+    "name": "install-www",
+    "compatibility_date": "2026-11-01",
+    // Static site only: no Worker script, everything in www/ is served as-is.
+    "assets": {
+        "directory": "./www"
+    },
+    // aloecraft.org must be a zone in the account you deploy to. Wrangler
+    // creates the DNS record and certificate for the hostname on deploy.
+    "routes": [
+        { "pattern": "install.aloecraft.org", "custom_domain": true }
+    ]
+}

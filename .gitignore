@@ -3,3 +3,5 @@
 .xtr
 x.md
 x.patch
+.wrangler
+node_modules
