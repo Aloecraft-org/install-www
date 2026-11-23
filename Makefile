@@ -16,4 +16,4 @@ dev:
 	@python3 -m http.server -d www
 
 deploy:
-	@npx wrangler@4 deploy
+	@npx --yes wrangler@4 deploy
