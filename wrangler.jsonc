@@ -5,9 +5,10 @@
     "assets": {
         "directory": "./www"
     },
-    // aloecraft.org must be a zone in the account you deploy to. Wrangler
+    // aloecraft.org must be a zone in the account you deploy to; zone_name is
+    // spelled out because a narrowly scoped API token cannot look it up. Wrangler
     // creates the DNS record and certificate for the hostname on deploy.
     "routes": [
-        { "pattern": "install.aloecraft.org", "custom_domain": true }
+        { "pattern": "install.aloecraft.org", "custom_domain": true, "zone_name": "aloecraft.org" }
     ]
 }
