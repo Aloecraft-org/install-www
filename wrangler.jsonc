@@ -1,5 +1,8 @@
 {
     "name": "install-www",
+    // The account that owns the aloecraft.org zone. Pinned so wrangler never
+    // prompts for, or caches, a different one.
+    "account_id": "312d2696f6652c927f203401daaa83d5",
     "compatibility_date": "2026-11-01",
     // Static site only: no Worker script, everything in www/ is served as-is.
     "assets": {
